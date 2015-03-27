@@ -1,0 +1,24 @@
+%h1 Listing requests
+
+%table
+  %tr
+    %th Name
+    %th Email
+    %th Class Of
+    %th Major
+    %th Description
+  %tbody
+   - @requests.each do |request|
+    %tr
+      %td= request.name
+      %td= request.email
+      %td= request.class_of
+      %td= request.major
+      %td= request.description
+      %td= link_to 'Show', request
+      %td= link_to 'Edit', edit_request_path(request)
+      %td= link_to 'Destroy', request, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'Add Performance Request', new_request_path
