@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @request.name
+%p
+  %b Email:
+  = @request.email
+%p
+  %b Class:
+  = @request.class_of
+%p
+  %b Major:
+  = @request.major
+%p
+  %b Description:
+  = @request.description
+
+= link_to 'Edit', edit_request_path(@request)
+\|
+= link_to 'Back', requests_path
