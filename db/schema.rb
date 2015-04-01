@@ -11,16 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150327194039) do
+ActiveRecord::Schema.define(:version => 20150401013454) do
 
-  create_table "requests", :force => true do |t|
-    t.string   "name"
+  create_table "performance_requests", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
-    t.string   "class_of"
-    t.string   "major"
-    t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "organization"
+    t.datetime "date"
+    t.string   "location"
+    t.text     "description"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
 end

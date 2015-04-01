@@ -1,6 +1,7 @@
 WranglersPortal::Application.routes.draw do
-  resources :requests
-  root :to => redirect('/requests')
+  resources :performance_requests
+
+  root :to => redirect('/performance_requests')
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
