@@ -1,0 +1,31 @@
+= form_for @performance_request do |f|
+  - if @performance_request.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@performance_request.errors.count, "error")} prohibited this performance_request from being saved:"
+      %ul
+        - @performance_request.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :first_name
+    = f.text_field :first_name
+  .field
+    = f.label :last_name
+    = f.text_field :last_name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :organization
+    = f.text_field :organization
+  .field
+    = f.label :date
+    = f.datetime_select :date
+  .field
+    = f.label :location
+    = f.text_field :location
+  .field
+    = f.label :description
+    = f.text_area :description
+  .actions
+    = f.submit 'Save'

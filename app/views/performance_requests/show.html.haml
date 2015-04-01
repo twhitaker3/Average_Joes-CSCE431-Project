@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @performance_request.first_name
+%p
+  %b Last name:
+  = @performance_request.last_name
+%p
+  %b Email:
+  = @performance_request.email
+%p
+  %b Organization:
+  = @performance_request.organization
+%p
+  %b Date:
+  = @performance_request.date
+%p
+  %b Location:
+  = @performance_request.location
+%p
+  %b Description:
+  = @performance_request.description
+
+= link_to 'Edit', edit_performance_request_path(@performance_request)
+\|
+= link_to 'Back', performance_requests_path
