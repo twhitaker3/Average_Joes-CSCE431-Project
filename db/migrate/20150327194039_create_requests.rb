@@ -1,11 +1,13 @@
-class CreateRequests < ActiveRecord::Migration
+class CreatePerformanceRequests < ActiveRecord::Migration
   def change
-    create_table :requests do |t|
-      t.string :name
+    create_table :performance_requests do |t|
+      t.string :first_name
+      t.string :last_name
       t.string :email
-      t.string :class
-      t.string :major
-      t.string :description
+      t.string :organization
+      t.datetime :date
+      t.string :location
+      t.text :description
 
       t.timestamps
     end
