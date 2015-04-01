@@ -86,6 +86,7 @@ When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
   select(value, :from => field)
 end
 
+
 When /^(?:|I )check "([^"]*)"$/ do |field|
   check(field)
 end
@@ -97,6 +98,7 @@ end
 When /^(?:|I )choose "([^"]*)"$/ do |field|
   choose(field)
 end
+
 
 When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
   attach_file(field, File.expand_path(path))

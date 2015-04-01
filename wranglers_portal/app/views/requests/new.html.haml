@@ -1,22 +1,5 @@
+%h1 Submit New Performance Request
 
-%h1 Create New Performance Request
+= render 'form'
 
-= form_tag requests_path, :method => :post do
-
-  = label :request, :name, 'Name'
-  = text_field :request, :name
-	
-  = label :request, :email, 'Email'
-  = text_field :request, :email
-
-  = label :request, :class_of, 'Class Of'
-  = text_field :request, :class_of
-	
-  = label :request, :major, 'Major'
-  = text_field :request, :major
-
-  = label :request, :description, 'Why Aggie Wranglers?'
-  = text_field :request, :description
-
-
-  = submit_tag 'Save Changes'
+= link_to 'Back', requests_path

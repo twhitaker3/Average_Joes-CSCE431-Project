@@ -2,18 +2,25 @@
 
 %table
   %tr
-    %th Name
+    %th First name
+    %th Last name
     %th Email
-    %th Class Of
-    %th Major
+    %th Organization
+    %th Date
+    %th Location
     %th Description
-  %tbody
-   - @requests.each do |request|
+    %th
+    %th
+    %th
+
+  - @requests.each do |request|
     %tr
-      %td= request.name
+      %td= request.first_name
+      %td= request.last_name
       %td= request.email
-      %td= request.class_of
-      %td= request.major
+      %td= request.organization
+      %td= request.date
+      %td= request.location
       %td= request.description
       %td= link_to 'Show', request
       %td= link_to 'Edit', edit_request_path(request)
@@ -21,4 +28,4 @@
 
 %br
 
-= link_to 'Add Performance Request', new_request_path
+= link_to 'Submit New Performance Request', new_request_path

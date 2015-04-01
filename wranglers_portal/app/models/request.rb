@@ -1,3 +1,3 @@
 class Request < ActiveRecord::Base
-  attr_accessible :class_of, :description, :email, :major, :name
+  attr_accessible :date, :description, :email, :first_name, :last_name, :location, :organization
 end

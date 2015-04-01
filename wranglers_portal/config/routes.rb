@@ -1,5 +1,8 @@
 WranglersPortal::Application.routes.draw do
   resources :requests
+
+
+  resources :requests
   root :to => redirect('/requests')
 
   # The priority is based upon order of creation:

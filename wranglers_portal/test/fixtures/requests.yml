@@ -1,15 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
+  first_name: MyString
+  last_name: MyString
   email: MyString
-  class: MyString
-  major: MyString
-  description: MyString
+  organization: MyString
+  date: 2015-03-31 21:08:55
+  location: MyString
+  description: MyText
 
 two:
-  name: MyString
+  first_name: MyString
+  last_name: MyString
   email: MyString
-  class: MyString
-  major: MyString
-  description: MyString
+  organization: MyString
+  date: 2015-03-31 21:08:55
+  location: MyString
+  description: MyText

@@ -24,7 +24,12 @@ class RequestsController < ApplicationController
   # GET /requests/new
   # GET /requests/new.json
   def new
-   #default new template
+    @request = Request.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @request }
+    end
   end
 
   # GET /requests/1/edit
@@ -37,14 +42,13 @@ class RequestsController < ApplicationController
   def create
     @request = Request.new(params[:request])
 
-
-   respond_to do |format|
+    respond_to do |format|
       if @request.save
         format.html { redirect_to requests_path, notice: 'Request was successfully created.' }
         format.json { render json: requests_path, status: :created, location: @request }
       else
         format.html { render action: "new" }
-        format.json { render json: requests_path.errors, status: :unprocessable_entity }
+        format.json { render json: @request.errors, status: :unprocessable_entity }
       end
     end
   end
