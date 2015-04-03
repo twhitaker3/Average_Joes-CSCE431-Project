@@ -28,4 +28,4 @@
 
 %br
 
-= link_to 'New Performance request', new_performance_request_path
+= link_to 'Submit New Performance Request', new_performance_request_path

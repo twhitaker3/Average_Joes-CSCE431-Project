@@ -5,7 +5,6 @@
       %ul
         - @performance_request.errors.full_messages.each do |msg|
           %li= msg
-
   .field
     = f.label :first_name, 'First Name'
     = f.text_field :first_name
