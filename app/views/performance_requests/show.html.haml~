@@ -24,7 +24,7 @@
 
 
 
-= form_tag @performance_requests_path, :method => :put do 
+= form_tag performance_requests_path, :method => :put do 
 
   = label :performance_request, :status, 'Status'
   = select :performance_request, :status, ['Pending','Accepted','Rejected']

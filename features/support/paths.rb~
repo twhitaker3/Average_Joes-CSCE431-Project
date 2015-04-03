@@ -16,9 +16,9 @@ module NavigationHelpers
     when /^the home\s?page$/
     #  '/'
     when /^the wranglers_portal home page/
-   	'/requests'
+   	'/performance_requests'
     when /^the Create New Request page/
-	'/requests/new'
+	'/performance_requests/new'
 	
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

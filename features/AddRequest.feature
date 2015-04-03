@@ -12,5 +12,5 @@ And I fill in "Location" with "HRBB"
 And I fill in "Why Aggie Wranglers?" with "Aggie Wranglers are awesome!"
 And I press "Submit"
 Then I should be on the wranglers_portal home page
-And I should see "James"
+
 

@@ -16,7 +16,9 @@ module NavigationHelpers
     when /^the home\s?page$/
     #  '/'
     when /^the wranglers_portal home page/
-   	'/performance_requests'
+   	'/welcome/home'
+    when /^the View Requests page/
+        '/performance_requests'
     when /^the Create New Request page/
 	'/performance_requests/new'
 	

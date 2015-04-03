@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+James:
+  first_name: James
+  last_name: Cooper
+  email: coopdecoop@hotmail.com
+  organization: SlyInc
+  date: 2015-03-31 22:34:54
+  location: Halifax
+  description: Cant get enough
+
+Jill:
+  first_name: Jill
+  last_name: Jack
+  email: jacknjill@gmail.com
+  organization: Beanstalk LLC
+  date: 2015-03-31 22:34:54
+  location: Greendale
+  description: Lovin it

@@ -1,0 +1,14 @@
+!!!
+%head
+  %meta{:charset => "utf-8"}
+  %meta{:author => "Paul Cowan"}
+  %title Wranglers Portal
+  =stylesheet_link_tag "application"
+  =javascript_include_tag "application"
+  =csrf_meta_tags
+  %link{:rel => "stylesheet", :type => "text/css", :href =>  "http://fonts.googleapis.com/cssfamily=Orbitron:regular,italic,bold,bolditalic"}
+  %link{:rel => "stylesheet", :type => "text/css", :href => "http:// fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"}
+  %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"}
+%body
+  %header
+    %hgroup

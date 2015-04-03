@@ -1,7 +1,9 @@
 WranglersPortal::Application.routes.draw do
+  get "welcome/home"
+
   resources :performance_requests
 
-  root :to => redirect('/performance_requests')
+  root :to => redirect('/welcome/home')
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
