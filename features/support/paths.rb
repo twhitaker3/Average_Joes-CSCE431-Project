@@ -21,7 +21,9 @@ module NavigationHelpers
         '/performance_requests'
     when /^the Create New Request page/
 	'/performance_requests/new'
-	
+    when /^(.*)'s Requests page$/i
+        performance_requests_path(@performance_request = PerformanceRequest.find_by_first_name($1))
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

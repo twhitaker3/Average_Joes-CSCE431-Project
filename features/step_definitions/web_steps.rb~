@@ -246,7 +246,7 @@ Then /^(?:|I )should find (.+)$/ do |page_name|
   if current_path.respond_to? :should
     current_path.should == path_to(page_name)
   else
-    assert_equal path_to(page_name), current_path
+    assert_equal (path_to(page_name)).sub('.','/').sub, current_path.sub
   end
 end
 Then /^(?:|I )should have the following query string:$/ do |expected_pairs|

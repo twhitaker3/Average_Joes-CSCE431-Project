@@ -1,4 +1,5 @@
 class PerformanceRequestsController < ApplicationController
+
   # GET /performance_requests
   # GET /performance_requests.json
   def index
@@ -9,7 +10,6 @@ class PerformanceRequestsController < ApplicationController
       format.json { render json: @performance_requests }
     end
   end
-  # GET /performance_requests/1/edit
   # GET /performance_requests/1
   # GET /performance_requests/1.json
   def show

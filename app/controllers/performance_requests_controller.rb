@@ -1,4 +1,5 @@
 class PerformanceRequestsController < ApplicationController
+
   # GET /performance_requests
   # GET /performance_requests.json
   def index
@@ -61,7 +62,7 @@ class PerformanceRequestsController < ApplicationController
 
     respond_to do |format|
       if @performance_request.update_attributes(params[:performance_request])
-        format.html { redirect_to @performance_request, notice: 'Performance request was successfully updated.' }
+        format.html { redirect_to performance_requests_path, notice: 'Performance request was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
