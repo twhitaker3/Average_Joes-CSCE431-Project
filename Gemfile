@@ -6,6 +6,7 @@ gem 'haml'
 
 gem 'haml-rails', :group => :development
 
+gem 'simplecov', :require => false, :group => :test
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
