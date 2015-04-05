@@ -40,10 +40,8 @@ class PerformanceRequestsController < ApplicationController
   # POST /performance_requests
   # POST /performance_requests.json
   def create
-    @performance_request = PerformanceRequest.new(params[:performance_request])
-    if @performance_request.status == "" 
-	then @performance_request.status = "Pending"
-    end
+    @performance_request = PerformanceRequest.new(params[:performance_request])    	 	  	@performance_request.status = "Pending"
+ 
     respond_to do |format|
       if @performance_request.save
         format.html { redirect_to '/welcome/home', notice: 'Performance request was successfully created.' }
@@ -62,7 +60,7 @@ class PerformanceRequestsController < ApplicationController
 
     respond_to do |format|
       if @performance_request.update_attributes(params[:performance_request])
-        format.html { redirect_to @performance_request, notice: 'Performance request was successfully updated.' }
+        format.html { redirect_to performance_requests_path, notice: 'Performance request was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

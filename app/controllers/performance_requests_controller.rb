@@ -41,9 +41,8 @@ class PerformanceRequestsController < ApplicationController
   # POST /performance_requests.json
   def create
     @performance_request = PerformanceRequest.new(params[:performance_request])
-    if @performance_request.status == "" 
-	then @performance_request.status = "Pending"
-    end
+    @performance_request.status = "Pending"
+   
     respond_to do |format|
       if @performance_request.save
         format.html { redirect_to '/welcome/home', notice: 'Performance request was successfully created.' }
