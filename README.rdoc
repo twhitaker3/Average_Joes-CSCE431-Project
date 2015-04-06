@@ -9,6 +9,7 @@ Run:
        rake db:migrate
        rails server
 Test
+      rake db:migrate (if you have not already)
        rake db:test:prepare
        rake db:fixtures:load RAILS_ENV=test
        cucumber
