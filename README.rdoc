@@ -1,5 +1,7 @@
 AverageJoes
 
+ITERATION 1
+
 Aggie Wrangler Portal
 
 Run:
@@ -10,3 +12,5 @@ Test
        rake db:test:prepare
        rake db:fixtures:load RAILS_ENV=test
        cucumber
+       or
+       autotest with AUTOFEATURE=true
