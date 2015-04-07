@@ -21,6 +21,8 @@ module NavigationHelpers
         '/performance_requests'
     when /^the Create New Request page/
 	'/performance_requests/new'
+    when /^the form Error page/
+	'/performance_requests'
     when /^(.*)'s Requests page$/i
         performance_requests_path(@performance_request = PerformanceRequest.find_by_first_name($1))
       
