@@ -8,6 +8,9 @@ class CreatePerformanceRequests < ActiveRecord::Migration
       t.datetime :date
       t.string :location
       t.text :description
+      t.string :status
+      t.string :type
+      t.string :dress
 
       t.timestamps
     end

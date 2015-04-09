@@ -5,8 +5,8 @@
       %ul
         - @performance_request.errors.full_messages.each do |msg|
           %li= msg
-
-    = label 'required', class: 'required'
+  .field
+    = f.label 'required', class: 'required'
 
   .field
     = f.label :first_name, 'First Name', class: 'required'
@@ -18,14 +18,20 @@
     = f.label :email , class: 'required'
     = f.text_field :email
   .field
-    = f.label :organization
+    = f.label :organization, 'Performance For'
     = f.text_field :organization
   .field
-    = f.label :date , class: 'required'
+    = f.label :date , 'Date and Time of Performance', class: 'required'
     = f.datetime_select :date
   .field
     = f.label :location , class: 'required'
     = f.text_field :location
+  .field
+    = f.label :type , 'Type of Performance', class: 'required'
+    = f.select :type, ['','Private','Public']
+  .field
+    = f.label :dress, 'Type of Atire', class: 'required'
+    = f.select :dress, ['','Formal','Casual']
   .field
     = f.label :description, 'Why Aggie Wranglers?' , class: 'required'
     = f.text_area :description

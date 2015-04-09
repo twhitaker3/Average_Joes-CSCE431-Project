@@ -8,6 +8,7 @@ James:
   date: 2015-03-31 22:34:54
   location: Halifax
   description: Cant get enough
+  status: Pending
 
 Jill:
   first_name: Jill
@@ -17,3 +18,4 @@ Jill:
   date: 2015-03-31 22:34:54
   location: Greendale
   description: Lovin it
+  status: Pending

@@ -14,26 +14,26 @@
       <img src="./assets/0.9.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-04-07T20:38:23-03:00">2015-04-07T20:38:23-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-04-08T22:19:15-03:00">2015-04-08T22:19:15-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">85.71%</span></span>
+    (<span class="covered_percent"><span class="yellow">86.15%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.4
+         1.39
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>63</b> relevant lines. 
-    <span class="green"><b>54</b> lines covered</span> and
+    <b>65</b> relevant lines. 
+    <span class="green"><b>56</b> lines covered</span> and
     <span class="red"><b>9</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -113,9 +113,9 @@
       <tr>
         <td class="strong"><a href="#218d27f27a9f3c1ad295395b738041556fe3ed4d" class="src_link" title="app/models/performance_request.rb">app/models/performance_request.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>8</td>
-        <td>8</td>
+        <td>14</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -207,8 +207,8 @@
   <a name="Models"></a>
   <div>
     <b>1</b> files in total.
-    <b>8</b> relevant lines. 
-    <span class="green"><b>8</b> lines covered</span> and
+    <b>10</b> relevant lines. 
+    <span class="green"><b>10</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -228,9 +228,9 @@
       <tr>
         <td class="strong"><a href="#218d27f27a9f3c1ad295395b738041556fe3ed4d" class="src_link" title="app/models/performance_request.rb">app/models/performance_request.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>8</td>
-        <td>8</td>
+        <td>14</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -1182,8 +1182,8 @@
     <h3>app/models/performance_request.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1206,7 +1206,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby"> attr_accessible :date, :description, :email, :first_name, :last_name, :location, :organization, :status</code>
+          <code class="ruby"> attr_accessible :date, :description, :email, :first_name, :last_name, :location, :organization, :status, :kind, :dress</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -1251,13 +1251,25 @@
           <code class="ruby"> validates :description, :presence =&gt; true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby"> validates :kind, :presence =&gt; true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby"> validates :dress, :presence =&gt; true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>

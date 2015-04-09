@@ -5,9 +5,12 @@
     %th First name
     %th Last name
     %th Email
-    %th Organization
+    %th Performance For
     %th Date
     %th Location
+    %th Private
+    %th Type
+    %th Dress
     %th Description
     %th Status
     %th
@@ -21,6 +24,8 @@
       %td= performance_request.organization
       %td= performance_request.date
       %td= performance_request.location
+      %td= performance_request.kind
+      %td= performance_request.dress
       %td= performance_request.description
       %td= performance_request.status
       %td= link_to 'Show', performance_request
