@@ -2,6 +2,7 @@ WranglersPortal::Application.routes.draw do
   get "welcome/home"
 
   resources :performance_requests 
+  resources :addresses
 
   root :to => redirect('/welcome/home')
 

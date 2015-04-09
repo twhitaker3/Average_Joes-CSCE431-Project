@@ -11,6 +11,7 @@ class CreatePerformanceRequests < ActiveRecord::Migration
       t.string :status
       t.string :kind
       t.string :dress
+      t.integer :performance_request_id
 
       t.timestamps
     end

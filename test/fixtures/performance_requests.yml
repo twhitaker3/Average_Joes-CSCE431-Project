@@ -11,6 +11,7 @@ James:
   status: Pending
   kind: Private
   dress: Formal
+  performance_request_id: 1
 
 Jill:
   first_name: Jill
@@ -23,3 +24,4 @@ Jill:
   status: Pending
   kind: Public
   dress: casual
+  performance_request_id: 2

@@ -42,14 +42,14 @@ class PerformanceRequestsController < ApplicationController
   def create
     @performance_request = PerformanceRequest.new(params[:performance_request])
     @performance_request.status = "Pending"
-   
+    Address.save
     respond_to do |format|
       if @performance_request.save
         format.html { redirect_to '/welcome/home', notice: 'Performance request was successfully created.' }
         format.json { render json: @performance_request, status: :created, location: @performance_request }
       else
         format.html { render action: "new" }
-        format.json { render json: '/performance_request/new.errors', status: :unprocessable_entity }
+        format.json { render json: @performance_request.errors, status: :unprocessable_entity }
       end
     end
   end

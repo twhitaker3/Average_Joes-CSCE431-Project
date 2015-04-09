@@ -9,6 +9,9 @@ James:
   location: Halifax
   description: Cant get enough
   status: Pending
+  kind: Private
+  dress: Formal
+  performance_request_id: 1
 
 Jill:
   first_name: Jill
@@ -19,3 +22,6 @@ Jill:
   location: Greendale
   description: Lovin it
   status: Pending
+  kind: Public
+  dress: casual
+  performance_request_id: 1

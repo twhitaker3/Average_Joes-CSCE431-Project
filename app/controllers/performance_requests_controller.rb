@@ -25,6 +25,7 @@ class PerformanceRequestsController < ApplicationController
   # GET /performance_requests/new.json
   def new
     @performance_request = PerformanceRequest.new
+    @performance_request.address = Address.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,7 +43,7 @@ class PerformanceRequestsController < ApplicationController
   def create
     @performance_request = PerformanceRequest.new(params[:performance_request])
     @performance_request.status = "Pending"
-   
+
     respond_to do |format|
       if @performance_request.save
         format.html { redirect_to '/welcome/home', notice: 'Performance request was successfully created.' }

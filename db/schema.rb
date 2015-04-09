@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150401013454) do
+ActiveRecord::Schema.define(:version => 20150409035128) do
+
+  create_table "addresses", :force => true do |t|
+    t.string   "line_1"
+    t.string   "line_2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.integer  "performance_request_id"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
 
   create_table "performance_requests", :force => true do |t|
     t.string   "first_name"
@@ -24,8 +35,9 @@ ActiveRecord::Schema.define(:version => 20150401013454) do
     t.string   "status"
     t.string   "kind"
     t.string   "dress"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.integer  "performance_request_id"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
   end
 
 end

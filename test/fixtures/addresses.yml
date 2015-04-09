@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  line_1: MyString
+  line_2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  performance_request_id: 1
+
+two:
+  line_1: MyString
+  line_2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  performance_request_id: 2
