@@ -22,7 +22,7 @@
     = f.text_field :organization
   .field
     = f.label :date , 'Date and Time of Performance', class: 'required'
-    = f.datetime_select :date
+    = f.datetime_select :date, :minute_step => 15, :ampm => true
   .field
     = f.label :location , class: 'required'
     = f.text_field :location
