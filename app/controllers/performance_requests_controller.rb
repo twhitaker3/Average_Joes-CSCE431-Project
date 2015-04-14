@@ -2,8 +2,18 @@ class PerformanceRequestsController < ApplicationController
 
   # GET /performance_requests
   # GET /performance_requests.json
+  helper_method :sort_column, :sort_direction
+
+  def sort_column
+    params[:sort] || "status"
+  end
+
+  def sort_direction
+    params[:direction] || "asc"
+  end
+    
   def index
-    @performance_requests = PerformanceRequest.all
+    @performance_requests = PerformanceRequest.order([sort_column, sort_direction].join(" "))
 
     respond_to do |format|
       format.html # index.html.erb
