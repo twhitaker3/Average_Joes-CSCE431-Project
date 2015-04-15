@@ -1,0 +1,43 @@
+class ControllersController < ApplicationController
+  before_filter :set_controller, only: [:show, :edit, :update, :destroy]
+
+  respond_to :html
+
+  def index
+    @controllers = Controller.all
+    respond_with(@controllers)
+  end
+
+  def show
+    respond_with(@controller)
+  end
+
+  def new
+    @controller = Controller.new
+    respond_with(@controller)
+  end
+
+  def edit
+  end
+
+  def create
+    @controller = Controller.new(params[:controller])
+    @controller.save
+    respond_with(@controller)
+  end
+
+  def update
+    @controller.update_attributes(params[:controller])
+    respond_with(@controller)
+  end
+
+  def destroy
+    @controller.destroy
+    respond_with(@controller)
+  end
+
+  private
+    def set_controller
+      @controller = Controller.find(params[:id])
+    end
+end

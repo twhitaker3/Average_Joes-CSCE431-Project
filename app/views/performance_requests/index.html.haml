@@ -6,13 +6,13 @@
     %th Last name
     %th Email
     %th Performance For
-    %th Date
+    %th= sortable 'Date'
     %th Location
     %th Private
     %th Type
     %th Dress
     %th Description
-    %th Status
+    %th= sortable 'Status'
     %th
     %th
 
@@ -22,7 +22,7 @@
       %td= performance_request.last_name
       %td= performance_request.email
       %td= performance_request.organization
-      %td= performance_request.date
+      %td= performance_request.date.strftime("%B %e, %Y @ %H:%M")
       %td= performance_request.location
       %td= performance_request.kind
       %td= performance_request.dress

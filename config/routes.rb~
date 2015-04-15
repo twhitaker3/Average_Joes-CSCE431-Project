@@ -1,7 +1,13 @@
 WranglersPortal::Application.routes.draw do
+  resources :controllers
+
+
+  devise_for :admins
+
   get "welcome/home"
 
-  resources :performance_requests do
+  resources :performance_requests 
+  resources :admin
 
   root :to => redirect('/welcome/home')
 

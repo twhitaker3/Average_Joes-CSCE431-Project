@@ -11,6 +11,12 @@ class CreatePerformanceRequests < ActiveRecord::Migration
       t.string :status
       t.string :kind
       t.string :dress
+      t.string :adr_line1
+      t.string :adr_line2
+      t.string :city
+      t.string :state
+      t.string :zip
+
 
       t.timestamps
     end

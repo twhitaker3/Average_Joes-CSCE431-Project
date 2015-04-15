@@ -23,8 +23,10 @@ module NavigationHelpers
 	'/performance_requests/new'
     when /^the form Error page/
 	'/performance_requests'
-    when /^(.*)'s Requests page$/i
-        performance_requests_path(@performance_request = PerformanceRequest.find_by_first_name($1))
+    when /^the Authentication page/
+   	'/admins/sign_in'
+    when /^the Sign Up page/
+   	'/admins/sign_up'
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
