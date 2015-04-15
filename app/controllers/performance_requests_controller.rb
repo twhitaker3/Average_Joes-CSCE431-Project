@@ -1,5 +1,5 @@
 class PerformanceRequestsController < ApplicationController
-
+  before_filter :authenticate_admin!, except: [:new, :create]
   # GET /performance_requests
   # GET /performance_requests.json
   helper_method :sort_column, :sort_direction
@@ -11,7 +11,7 @@ class PerformanceRequestsController < ApplicationController
   def sort_direction
     params[:direction] || "asc"
   end
-    
+
   def index
     @performance_requests = PerformanceRequest.order([sort_column, sort_direction].join(" "))
 

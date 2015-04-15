@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div class="container">
 
-<%= yield %>
+     <%= flash_messages %>
 
+     <%= yield %>
+   
+   </div><!-- /container -->
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 </body>
 </html>
