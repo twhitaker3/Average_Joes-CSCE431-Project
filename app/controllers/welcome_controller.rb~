@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  before_filter :authenticate_admin!, except: [:index]
   def home
   end
 end
+

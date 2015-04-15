@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+Allie:
+  email: alliemart7@tamu.edu
+  encrypted_password: <%= Devise.bcrypt(admin, 'howdyaggies') %>
+  

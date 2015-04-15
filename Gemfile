@@ -17,6 +17,7 @@ end
 
 group :production do
   gem 'pg'
+ 
 end
 
 
@@ -56,3 +57,7 @@ group :test do
   gem 'capybara'
   gem 'launchy'
 end
+
+#gem 'cancan', '~> 1.6.10'
+
+gem 'devise'

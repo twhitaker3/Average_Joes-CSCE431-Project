@@ -24,7 +24,7 @@
       %td= performance_request.organization
       %td= performance_request.date
       %td= performance_request.location
-      %td= performance_request.type
+      %td= performance_request.kind
       %td= performance_request.dress
       %td= performance_request.description
       %td= performance_request.status

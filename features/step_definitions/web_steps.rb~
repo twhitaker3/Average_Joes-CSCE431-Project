@@ -246,7 +246,7 @@ Then /^(?:|I )should find (.+)$/ do |page_name|
   if current_path.respond_to? :should
     current_path.should == path_to(page_name)
   else
-    assert_equal (path_to(page_name)).sub('.','/').sub, current_path.sub
+    assert_equal path_to(page_name), current_path
   end
 end
 Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
@@ -264,4 +264,20 @@ end
 
 Then /^show me the page$/ do
   save_and_open_page
+end
+
+Given /^I have email "([^\"]*)" and password "([^\"]*)"$/ do | use |email,password|
+   @admin = Admin.new(:email => email,
+                   :password => password)
+   @admin.save!
+end
+
+Given /^I am an authenticated user$/ do
+  email = 'example@example.com'
+  password = 'secret!'
+
+  Given %{I have one email "#{email}" and password "#{password}"}
+  And %{I go to the user login page}
+  And %{I fill in "user_password" with "#{password}"}
+  And %{I press "Login in"}
 end
