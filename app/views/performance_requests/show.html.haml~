@@ -19,26 +19,6 @@
   %b Location:
   = @performance_request.location
 %p
-  %b Address: 
-  %p Line 1:
-  = @performance_request.adr_line1
-  %p
-
-  = @performance_request.adr_line2
-  %p
-
-  = @performance_request.city
-  %p
-  = @performance_request.state
-  %p
-  = @performance_request.zip
-%p
-  %b Type:
-  = @performance_request.kind
-%p
-  %b Dress:
-  = @performance_request.dress
-%p
   %b Description:
   = @performance_request.description
 

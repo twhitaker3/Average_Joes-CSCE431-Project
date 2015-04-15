@@ -7,11 +7,6 @@ James:
   organization: SlyInc
   date: 2015-03-31 22:34:54
   location: Halifax
-  adr_line1: Wellborn Rd.
-  adr_line2: Apt. 1831
-  city: College Station
-  state: TX
-  zip: 77480
   description: Cant get enough
   status: Pending
   kind: Private
@@ -24,11 +19,6 @@ Jill:
   organization: Beanstalk LLC
   date: 2015-03-31 22:34:54
   location: Greendale
-  adr_line1: George Bush Dr.
-  adr_line2: Apt. 4573 
-  city: Lake Jackson
-  state: TX
-  zip: 83432
   description: Lovin it
   status: Pending
   kind: Public

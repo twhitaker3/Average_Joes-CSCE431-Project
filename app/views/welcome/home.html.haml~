@@ -6,4 +6,4 @@
 
 
 %br
-= link_to 'Authorized Users', '/admin'
+= link_to 'Authorized Users', index_performance_request_path

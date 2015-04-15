@@ -6,49 +6,34 @@
         - @performance_request.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label 'optional', class: 'optional'
+    = f.label 'required', class: 'required'
 
   .field
-    = f.label :first_name, 'First Name'
+    = f.label :first_name, 'First Name', class: 'required'
     = f.text_field :first_name
   .field
-    = f.label :last_name,  'Last Name'
+    = f.label :last_name,  'Last Name', class: 'required'
     = f.text_field :last_name
   .field
-    = f.label :email
+    = f.label :email , class: 'required'
     = f.text_field :email
   .field
     = f.label :organization, 'Performance For'
     = f.text_field :organization
   .field
-    = f.label :date , 'Date and Time of Performance'
-    = f.datetime_select :date, :minute_step => 15, :ampm => true
+    = f.label :date , 'Date and Time of Performance', class: 'required'
+    = f.datetime_select :date
   .field
-    = f.label :location
+    = f.label :location , class: 'required'
     = f.text_field :location
   .field
-    = f.label :adr_line1 , 'Address Line 1'
-    = f.text_field :adr_line1
-  .field
-    = f.label :adr_line2 , 'Address Line 2', class: 'optional'
-    = f.text_field :adr_line2
-  .field
-    = f.label :city , 'City'
-    = f.text_field :city
-  .field
-    = f.label :state , 'State'
-    = f.text_field :state
-  .field
-    = f.label :zip , 'Zip'
-    = f.text_field :zip
-  .field
-    = f.label :kind , 'Type of Performance'
+    = f.label :kind , 'Type of Performance', class: 'required'
     = f.select :kind, ['','Private','Public']
   .field
-    = f.label :dress, 'Type of Attire'
+    = f.label :dress, 'Type of Atire', class: 'required'
     = f.select :dress, ['','Formal','Casual']
   .field
-    = f.label :description, 'Why Aggie Wranglers?'
+    = f.label :description, 'Why Aggie Wranglers?' , class: 'required'
     = f.text_area :description
   .actions
     = f.submit 'Submit'
