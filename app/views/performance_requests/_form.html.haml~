@@ -5,8 +5,8 @@
       %ul
         - @performance_request.errors.full_messages.each do |msg|
           %li= msg
-  .field
-    = f.label 'optional', class: 'optional'
+  #.field
+   # = f.label 'optional', class: 'optional'
 
   .field
     = f.label :first_name, 'First Name'
@@ -30,7 +30,7 @@
     = f.label :adr_line1 , 'Address Line 1'
     = f.text_field :adr_line1
   .field
-    = f.label :adr_line2 , 'Address Line 2', class: 'optional'
+    = f.label :adr_line2 , 'Address Line 2'#, class: 'optional'
     = f.text_field :adr_line2
   .field
     = f.label :city , 'City'
