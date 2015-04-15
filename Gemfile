@@ -57,6 +57,6 @@ group :test do
   gem 'launchy'
 end
 
-gem 'cancan', '~> 1.6.10'
+#gem 'cancan', '~> 1.6.10'
 
 gem 'devise'
