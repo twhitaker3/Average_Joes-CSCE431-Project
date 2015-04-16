@@ -115,6 +115,21 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   end
 end
 
+Then(/^I should see "(.*?)" before "(.*?)"$/) do |req1, req2|
+  aString = page.body.to_s
+    if aString.index(req1)!= nil && aString.index(req2) != nil
+      if aString.index(req1)<aString.index(req2)
+      else
+      assert false,"jr_fail"
+      end
+    else
+      assert false,"jr_fail"
+    end
+end
+
+
+
+
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   regexp = Regexp.new(regexp)
 
@@ -261,6 +276,8 @@ Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
     assert_equal expected_params, actual_params
   end
 end
+
+
 
 Then /^show me the page$/ do
   save_and_open_page

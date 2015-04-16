@@ -14,7 +14,7 @@
       <img src="./assets/0.9.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-04-15T04:18:28-03:00">2015-04-15T04:18:28-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-04-15T21:41:03-03:00">2015-04-15T21:41:03-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.35
+         2.07
        </span>
     </span> hits/line)
   </h2>
@@ -77,7 +77,7 @@
         <td>47</td>
         <td>39</td>
         <td>8</td>
-        <td>1.5</td>
+        <td>2.5</td>
       </tr>
       
       <tr>
@@ -107,7 +107,7 @@
         <td>18</td>
         <td>13</td>
         <td>5</td>
-        <td>3.0</td>
+        <td>5.2</td>
       </tr>
       
       <tr>
@@ -163,7 +163,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.08
+         1.65
        </span>
     </span> hits/line)
   </h2>
@@ -215,7 +215,7 @@
         <td>47</td>
         <td>39</td>
         <td>8</td>
-        <td>1.5</td>
+        <td>2.5</td>
       </tr>
       
       <tr>
@@ -297,7 +297,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.71
+         4.6
        </span>
     </span> hits/line)
   </h2>
@@ -339,7 +339,7 @@
         <td>18</td>
         <td>13</td>
         <td>5</td>
-        <td>3.0</td>
+        <td>5.2</td>
       </tr>
       
       <tr>
@@ -879,8 +879,8 @@
           <code class="ruby">  def sort_column</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="8">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="30" data-linenumber="8">
+          <span class="hits">30</span>
           
           <code class="ruby">    params[:sort] || &quot;status&quot;</code>
         </li>
@@ -903,8 +903,8 @@
           <code class="ruby">  def sort_direction</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="12">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="12" data-linenumber="12">
+          <span class="hits">12</span>
           
           <code class="ruby">    params[:direction] || &quot;asc&quot;</code>
         </li>
@@ -927,8 +927,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="16">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="6" data-linenumber="16">
+          <span class="hits">6</span>
           
           <code class="ruby">    @performance_requests = PerformanceRequest.order([sort_column, sort_direction].join(&quot; &quot;))</code>
         </li>
@@ -939,20 +939,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="18">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="6" data-linenumber="18">
+          <span class="hits">6</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="6" data-linenumber="19">
+          <span class="hits">6</span>
           
           <code class="ruby">      format.html # index.html.erb</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="20">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="6" data-linenumber="20">
+          <span class="hits">6</span>
           
           <code class="ruby">      format.json { render json: @performance_requests }</code>
         </li>
@@ -1539,8 +1539,8 @@
           <code class="ruby">	def flash_messages(opts = {})</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="7">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="25" data-linenumber="7">
+          <span class="hits">25</span>
           
           <code class="ruby">	  flash.each do |msg_type, message|</code>
         </li>
@@ -1641,26 +1641,26 @@
           <code class="ruby">	def sortable(column, title = nil)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="24">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="12" data-linenumber="24">
+          <span class="hits">12</span>
           
           <code class="ruby">	  title ||= column.titleize</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="25">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="12" data-linenumber="25">
+          <span class="hits">12</span>
           
           <code class="ruby">	  css_class = column == sort_column ? &quot;current #{sort_direction}&quot; : nil</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="26">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="12" data-linenumber="26">
+          <span class="hits">12</span>
           
           <code class="ruby"> 	  direction = (column == sort_column &amp;&amp; sort_direction == &quot;asc&quot;) ? &quot;desc&quot; : &quot;asc&quot;</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="27">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="12" data-linenumber="27">
+          <span class="hits">12</span>
           
           <code class="ruby">	  link_to title, {:sort =&gt; column, :direction =&gt; direction}, {:class =&gt; css_class}</code>
         </li>

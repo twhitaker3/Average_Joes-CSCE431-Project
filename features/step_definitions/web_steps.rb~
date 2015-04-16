@@ -115,6 +115,11 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   end
 end
 
+Then(/^I should see the requests in this order:$/) do |table|
+ page.should have_content(table)
+end
+
+
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   regexp = Regexp.new(regexp)
 
@@ -262,22 +267,8 @@ Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
   end
 end
 
+
+
 Then /^show me the page$/ do
   save_and_open_page
-end
-
-Given /^I have email "([^\"]*)" and password "([^\"]*)"$/ do | use |email,password|
-   @admin = Admin.new(:email => email,
-                   :password => password)
-   @admin.save!
-end
-
-Given /^I am an authenticated user$/ do
-  email = 'example@example.com'
-  password = 'secret!'
-
-  Given %{I have one email "#{email}" and password "#{password}"}
-  And %{I go to the user login page}
-  And %{I fill in "user_password" with "#{password}"}
-  And %{I press "Login in"}
 end
