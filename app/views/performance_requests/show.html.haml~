@@ -20,7 +20,7 @@
   = @performance_request.location
 %p
   %b Address: 
-  %p Line 1:
+  %p 
   = @performance_request.adr_line1
   %p
 

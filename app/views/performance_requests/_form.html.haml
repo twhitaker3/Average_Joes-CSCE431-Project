@@ -20,8 +20,8 @@
     = f.label :organization, 'Performance For'
     = f.text_field :organization
   .field
-    = f.label :date , 'Date and Time of Performance'
-    = f.datetime_select :date, :minute_step => 15, :ampm => true
+    = f.label :start_at , 'Date and Time of Performance'
+    = f.datetime_select :start_at, :minute_step => 15, :ampm => true
   .field
     = f.label :location
     = f.text_field :location
