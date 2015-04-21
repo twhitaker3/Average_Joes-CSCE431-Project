@@ -14,7 +14,7 @@
   = @performance_request.organization
 %p
   %b Date:
-  = @performance_request.date
+  = @performance_request.start_at
 %p
   %b Location:
   = @performance_request.location
@@ -44,9 +44,8 @@
 
 
 
-= form_tag @performance_requests_path, :method => :put do 
-
-  = label :performance_request, :status, 'Status'
+= form_tag @performance_requests_path, :method => :put do
+  = label :performance_request, :status, %b 'Status'
   = select :performance_request, :status, ['Pending','Accepted','Rejected']
   = submit_tag 'Update Status'
 

@@ -25,6 +25,8 @@ module NavigationHelpers
 	'/performance_requests'
     when /^the Authentication page/
    	'/admins/sign_in'
+    when /^the Sign Up page/
+   	'/admins/sign_up'
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

@@ -103,7 +103,7 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
 end
 
 When(/^I follow "(.*?)" from "(.*?)"$/) do |link, value|
-  click_link(link, match: :first)
+  click_link(link,exact: true, match: :first)
 end
 
 

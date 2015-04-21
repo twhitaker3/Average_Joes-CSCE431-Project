@@ -11,7 +11,7 @@ And I press "Sign up"
 Then I should be on the wranglers_portal home page
 When I follow "Authorized Users"
 Then I should be on the View Requests page
-When I follow "Date"
+When I follow "Start At"
 Then I should see "James" before "Jill"
 When I follow "Status"
 Then I should see "Jill" before "James"

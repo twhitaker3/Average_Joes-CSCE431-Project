@@ -103,7 +103,7 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
 end
 
 When(/^I follow "(.*?)" from "(.*?)"$/) do |link, value|
-  click_link(link, match: :first)
+  click_link(link, exact: :first)
 end
 
 
@@ -115,9 +115,19 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   end
 end
 
-Then(/^I should see the requests in this order:$/) do |table|
- page.should have_content(table)
+Then(/^I should see "(.*?)" before "(.*?)"$/) do |req1, req2|
+  aString = page.body.to_s
+    if aString.index(req1)!= nil && aString.index(req2) != nil
+      if aString.index(req1)<aString.index(req2)
+      else
+      assert false,"jr_fail"
+      end
+    else
+      assert false,"jr_fail"
+    end
 end
+
+
 
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|

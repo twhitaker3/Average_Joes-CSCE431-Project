@@ -1,12 +1,13 @@
 %h1 Open Performance Requests
 
+= link_to 'Calendar View', calendar_path
 %table
   %tr
     %th First name
     %th Last name
     %th Email
     %th Performance For
-    %th= sortable 'Date'
+    %th= sortable 'Start_at'
     %th Location
     %th Private
     %th Dress
@@ -27,9 +28,9 @@
       %td= performance_request.dress
       %td= performance_request.description
       %td= performance_request.status
-      %td= link_to 'Show', performance_request
-      %td= link_to 'Edit', edit_performance_request_path(performance_request)
-      %td= link_to 'Destroy', performance_request, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'View', performance_request
+      #%td= link_to 'Edit', edit_performance_request_path(performance_request)
+      %td= link_to 'Delete', performance_request, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
