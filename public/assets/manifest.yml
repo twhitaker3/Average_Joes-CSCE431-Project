@@ -5,5 +5,7 @@ application.js: application-298358e9f0126fc43d57eca204e28f66.js
 application/index.js: application-298358e9f0126fc43d57eca204e28f66.js
 application.css: application-74c91873c75d9a917b95b52d476f13ba.css
 application/index.css: application-74c91873c75d9a917b95b52d476f13ba.css
+event_calendar.css: event_calendar-6b344c47692061c163e0287934e89c6a.css
+event_calendar/index.css: event_calendar-6b344c47692061c163e0287934e89c6a.css
 jquery.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
 jquery/index.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
