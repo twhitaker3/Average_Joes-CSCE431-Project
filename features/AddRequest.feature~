@@ -19,7 +19,7 @@ And I fill in "City" with "College Station"
 And I fill in "State" with "TX"
 And I fill in "Zip" with "77801"
 And I select "Private" from "Type of Performance"
-And I select "Formal" from "Type of Atire"
+And I select "Formal" from "Type of Attire"
 And I fill in "Why Aggie Wranglers?" with "Aggie Wranglers are awesome!"
 And I press "Submit"
 Then I should be on the wranglers_portal home page
@@ -43,7 +43,7 @@ When I fill in "Email" with "depp@richguy.com"
 #need to figure out how to write step definition for datetime
 And I fill in "Location" with "Hollywood"
 And I select "Private" from "Type of Performance"
-And I select "Formal" from "Type of Atire"
+And I select "Formal" from "Type of Attire"
 And I press "Submit"
 Then I should be on the wranglers_portal home page
 

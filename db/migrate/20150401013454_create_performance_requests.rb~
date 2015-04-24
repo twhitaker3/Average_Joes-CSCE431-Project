@@ -5,7 +5,8 @@ class CreatePerformanceRequests < ActiveRecord::Migration
       t.string :last_name
       t.string :email
       t.string :organization
-      t.datetime :date
+      t.datetime :start_at
+      t.datetime :end_at
       t.string :location
       t.text :description
       t.string :status
