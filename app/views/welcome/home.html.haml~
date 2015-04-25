@@ -2,8 +2,8 @@
 %p Welcome!
 
 %br
-= link_to 'Submit New Performance Request', new_performance_request_path
+= link_to 'Submit New Performance Request', new_performance_request_path, class: "btn"
 
 
 %br
-= link_to 'Authorized Users', '/admin'
+= link_to 'Authorized Users', '/performance_requests'
