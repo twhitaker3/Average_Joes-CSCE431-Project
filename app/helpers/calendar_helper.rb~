@@ -19,8 +19,9 @@ module CalendarHelper
     space = " "
     calendar event_calendar_opts do |args|
       event = args[:event]
-      str = event.first_name + space + event.last_name + space + event.organization + space + event.status
-      %(<a href="/performance_requests/#{event.id}" title="#{h(str)}">#{h(str)}</a>)
+      str1 = event.first_name + space + event.last_name + space + event.organization + space + event.status
+      str2 = event.first_name + space + event.last_name
+      %(<a href="/performance_requests/#{event.id}" title="#{h(str1)}">#{h(str2)}&#013;#{h(event.organization)}<br/>#{h(event.status)}</a>)
     end
   end
 end
