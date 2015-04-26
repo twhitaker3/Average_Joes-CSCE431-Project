@@ -3,6 +3,9 @@ WranglersPortal::Application.configure do
 
   config.assets.precompile += %w( event_calendar.css )
   config.assets.precompile += %w( event_calendar.js )
+  config.assets.precompile += %w( bootstrap.js.coffe )
+  config.assets.precompile += %w( application.js )
+  config.assets.precompile += %w( bootstrap_and_overrides.css.less )
   # Code is not reloaded between requests
   config.cache_classes = true
 
