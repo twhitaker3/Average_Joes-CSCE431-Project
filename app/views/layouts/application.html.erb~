@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container">
-      
-     
+
+     <%= flash_messages %>
 
      <%= yield %>
    
@@ -17,9 +17,9 @@
      <p class="notice"><%= notice %></p>
      <p class="alert"><%= alert %></p>
      <% if admin_signed_in? %>
-       <%= link_to "Sign out", destroy_admin_session_path, :method => :delete, :style=>'color:#FFFFFF;', :class => 'btn btn-primary' %>
+       <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
      <% else %>
-       <%= link_to('Sign in', new_admin_session_path, :style=>'color:#FFFFFF;', :class => 'btn btn-primary') %>
+       <%= link_to('Login', new_admin_session_path) %>
      <% end %>
 </body>
 </html>

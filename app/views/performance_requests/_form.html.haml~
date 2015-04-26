@@ -6,7 +6,8 @@
         - @performance_request.errors.full_messages.each do |msg|
           %li= msg
   
-
+  %p
+    %b Personal Contact Information:
   .field
     = f.label :first_name, 'First Name'
     = f.text_field :first_name
@@ -17,6 +18,28 @@
     = f.label :email
     = f.text_field :email
   .field
+    = f.label :number, 'Phone Number', class: 'optional'
+    = f.text_field :number
+  %p
+    %b Your Address so that we may thank you:
+  .field
+    = f.label :padr_line1 , 'Address Line 1 ' , class: 'optional'
+    = f.text_field :padr_line1
+  .field
+    = f.label :padr_line2 , 'Address Line 2 ' , class: 'optional'
+    = f.text_field :padr_line2
+  .field
+    = f.label :p_city , 'City ' , class: 'optional'
+    = f.text_field :p_city
+  .field
+    = f.label :p_state , 'State ' , class: 'optional'
+    = f.text_field :p_state
+  .field
+    = f.label :p_zip , 'Zip ' , class: 'optional'
+    = f.text_field :p_zip
+  %p
+    %b Performance Information
+  .field
     = f.label :organization, 'Performance For'
     = f.text_field :organization
   .field
@@ -25,11 +48,13 @@
   .field
     = f.label :location
     = f.text_field :location
+  %p
+    %b Address:
   .field
     = f.label :adr_line1 , 'Address Line 1'
     = f.text_field :adr_line1
   .field
-    = f.label :adr_line2 , 'Address Line 2'
+    = f.label :adr_line2 , 'Address Line 2' , class: 'optional'
     = f.text_field :adr_line2
   .field
     = f.label :city , 'City'
@@ -40,6 +65,8 @@
   .field
     = f.label :zip , 'Zip'
     = f.text_field :zip
+  %p
+    %b Details:
   .field
     = f.label :kind , 'Type of Performance'
     = f.select :kind, ['','Private','Public']

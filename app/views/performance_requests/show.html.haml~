@@ -1,6 +1,8 @@
 %p#notice= notice
 
 %p
+  %b Contact Information:
+%p
   %b First name:
   = @performance_request.first_name
 %p

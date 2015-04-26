@@ -1,6 +1,8 @@
 %p#notice= notice
 
 %p
+  %b Contact Information:
+%p
   %b First name:
   = @performance_request.first_name
 %p
@@ -9,6 +11,25 @@
 %p
   %b Email:
   = @performance_request.email
+%p
+  %b Phone Number:
+  = @performance_request.number
+%p
+  %b Address: 
+  %p 
+  = @performance_request.padr_line1
+  %p
+
+  = @performance_request.padr_line2
+  %p
+
+  = @performance_request.p_city
+  %p
+  = @performance_request.p_state
+  %p
+  = @performance_request.p_zip
+%p
+  %b Performance Information:
 %p
   %b Organization:
   = @performance_request.organization
@@ -49,6 +70,6 @@
   = select :performance_request, :status, ['Pending','Accepted','Rejected']
   = submit_tag 'Update Status'
 
-= link_to 'Edit', edit_performance_request_path(@performance_request), class: "btn btn-mini"
+= link_to 'Edit', edit_performance_request_path(@performance_request)
 \|
-= link_to 'Back', performance_requests_path, class: "btn btn-mini"
+= link_to 'Back', performance_requests_path

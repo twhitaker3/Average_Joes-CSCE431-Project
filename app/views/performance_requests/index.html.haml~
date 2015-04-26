@@ -1,6 +1,6 @@
 %h1 Open Performance Requests
 
-= link_to 'Calendar View', calendar_path, class: "btn btn-small"
+= link_to 'Calendar View', calendar_path
 %table
   %tr
     %th First name
@@ -28,9 +28,10 @@
       %td= performance_request.dress
       %td= performance_request.description
       %td= performance_request.status
-      %td= link_to 'View', performance_request, class: "btn btn-mini"
-      %td= link_to 'Delete', performance_request, :method => :delete, :data => { :confirm => 'Are you sure?' },:style=>'color:#FFFFFF;', class: "btn btn-mini btn-danger"
+      %td= link_to 'View', performance_request
+      #%td= link_to 'Edit', edit_performance_request_path(performance_request)
+      %td= link_to 'Delete', performance_request, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'Submit New Performance Request', new_performance_request_path, class: "btn"
+= link_to 'Submit New Performance Request', new_performance_request_path

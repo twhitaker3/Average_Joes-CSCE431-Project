@@ -1,4 +1,4 @@
-%h1 Submit New Performance Request 
+%h1 New performance_request
 
 = render 'form'
 

@@ -1,7 +1,11 @@
 %h1 Editing performance_request
 
-= render 'form'
+= form_tag performance_requests_path, :method => :post do 
+
+  = label :performance_request, :status, 'Status'
+  = select :performance_request, :status, ['Pending','Accepted','Rejected']
+  = submit_tag 'Update Status'
 
 = link_to 'Show', @performance_request
 \|
-= link_to 'Back', performance_requests_path, class: "btn btn-mini"
+= link_to 'Back', performance_requests_path
