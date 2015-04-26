@@ -2,7 +2,7 @@ WranglersPortal::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   config.assets.precompile += %w( event_calendar.css )
-config.assets.precompile += %w( event_calendar.js )
+  config.assets.precompile += %w( event_calendar.js )
   # Code is not reloaded between requests
   config.cache_classes = true
 
