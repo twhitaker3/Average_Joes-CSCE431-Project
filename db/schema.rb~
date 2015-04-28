@@ -36,7 +36,8 @@ ActiveRecord::Schema.define(:version => 20150413191530) do
     t.string   "last_name"
     t.string   "email"
     t.string   "organization"
-    t.datetime "date"
+    t.datetime "start_at"
+    t.datetime "end_at"
     t.string   "location"
     t.text     "description"
     t.string   "status"
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20150413191530) do
     t.string   "dress"
     t.string   "adr_line1"
     t.string   "adr_line2"
+    t.string   "city"
     t.string   "state"
     t.string   "zip"
     t.datetime "created_at",   :null => false

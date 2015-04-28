@@ -29,6 +29,8 @@ module NavigationHelpers
    	'/admins/sign_up'
     when /^the Calendar page/
         '/calendar'
+    when /^the Invitation page/
+        '/invitation'
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

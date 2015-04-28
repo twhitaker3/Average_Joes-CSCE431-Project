@@ -17,10 +17,9 @@ module CalendarHelper
   def event_calendar
     # args is an argument hash containing :event, :day, and :options
     space = " "
-    comma = ", "
     calendar event_calendar_opts do |args|
       event = args[:event]
-      str = event.first_name + space + event.last_name + comma + event.organization + comma + event.status
+      str = event.first_name + space + event.last_name + space + event.organization + space + event.status
       %(<a href="/performance_requests/#{event.id}" title="#{h(str)}">#{h(str)}</a>)
     end
   end

@@ -1,13 +1,18 @@
 WranglersPortal::Application.routes.draw do
-  resources :controllers
 
 
-  devise_for :admins
+  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
+  devise_for :admins 
 
   get "welcome/home"
+  get '/signup/:invitation_token', :controller => 'admins', :action => 'new'
+  get "/rails/mailers/invitation_mailer/invitation_mail_preview"
 
   resources :performance_requests 
   resources :admin
+  resources :invitations
+
 
   root :to => redirect('/welcome/home')
 

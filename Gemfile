@@ -4,6 +4,8 @@ gem 'rails', '3.2.16'
 
 gem 'haml'
 
+gem 'figaro'
+
 gem 'event-calendar', :require => 'event_calendar'
 
 gem 'haml-rails', :group => :development
@@ -33,10 +35,6 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-
-  gem "therubyracer"
-  gem "less-rails"
-  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'

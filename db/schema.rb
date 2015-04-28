@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150413191530) do
+ActiveRecord::Schema.define(:version => 20150427214411) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -26,21 +26,26 @@ ActiveRecord::Schema.define(:version => 20150413191530) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.integer  "invitation_id"
+    t.integer  "invitation_limit"
   end
 
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
+  create_table "invitations", :force => true do |t|
+    t.integer  "sender_id"
+    t.string   "recipient_email"
+    t.string   "token"
+    t.datetime "sent_at"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
   create_table "performance_requests", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.string   "number"
-    t.string   "padr_line1"
-    t.string   "padr_line2"
-    t.string   "p_city"
-    t.string   "p_state"
-    t.string   "p_zip"
     t.string   "organization"
     t.datetime "start_at"
     t.datetime "end_at"

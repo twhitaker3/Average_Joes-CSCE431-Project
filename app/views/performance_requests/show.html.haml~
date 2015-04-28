@@ -1,8 +1,6 @@
 %p#notice= notice
 
 %p
-  %b Contact Information:
-%p
   %b First name:
   = @performance_request.first_name
 %p
@@ -47,7 +45,7 @@
 
 
 = form_tag @performance_requests_path, :method => :put do
-  = label :performance_request, :status, 'Status'
+  = label :performance_request, :status, %b 'Status'
   = select :performance_request, :status, ['Pending','Accepted','Rejected']
   = submit_tag 'Update Status'
 

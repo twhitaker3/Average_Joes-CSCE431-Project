@@ -29,9 +29,10 @@
       %td= performance_request.description
       %td= performance_request.status
       %td= link_to 'View', performance_request
-      #%td= link_to 'Edit', edit_performance_request_path(performance_request)
       %td= link_to 'Delete', performance_request, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
 = link_to 'Submit New Performance Request', new_performance_request_path
+
+= link_to 'Send Invitations', new_invitation_path
