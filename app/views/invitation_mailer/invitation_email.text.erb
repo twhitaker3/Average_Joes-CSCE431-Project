@@ -1,0 +1,5 @@
+Hi <%= @invitation.recipient_email %>
+You are invited to join Aggie Wranglers Administration.
+
+Click <%= link_to 'Sign Up', new_admin_session_path(@invitation.token) %>
+

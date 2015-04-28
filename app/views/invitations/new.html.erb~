@@ -1,0 +1,16 @@
+<h2>New Invitation</h2>
+
+<%= form_for @invitation do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :recipient_email %><br />
+    <%= f.text_field :recipient_email, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Invite!" %>
+  </div>
+<% end %>
+
+

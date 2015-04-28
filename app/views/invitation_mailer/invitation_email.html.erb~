@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @invitation.recipient_email %></h1>
+    <p>
+      You are invited to join Aggie Wranglers Administration. Click <%= link_to 'Sign Up', sign_in_url(@invitation.token) %>
+    </p>
+  </body>
+</html>
+
