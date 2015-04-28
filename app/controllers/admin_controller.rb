@@ -15,8 +15,9 @@ class AdminController < ApplicationController
 
 
   def new
-    @admin = Admin.new
-    respond_with(@admins)
+    @admin = Admin.new(:invitation_token => params[:invitation_token])
+    @admin.email = @admin.invitation.recipient_email if @admin.invitation
+    respond_with(@admin)
   end
 
   def edit

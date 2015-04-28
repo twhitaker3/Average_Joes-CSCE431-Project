@@ -4,6 +4,8 @@ gem 'rails', '3.2.16'
 
 gem 'haml'
 
+gem 'figaro'
+
 gem 'event-calendar', :require => 'event_calendar'
 
 gem 'haml-rails', :group => :development
