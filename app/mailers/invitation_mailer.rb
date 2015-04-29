@@ -3,6 +3,7 @@ class InvitationMailer < ActionMailer::Base
 
   def invitation_email(invitation)
     @invitation = invitation
+    @url = 'http://wranglers-portal.herokuapp.com/admins/sign_in'
     mail(to: @invitation.recipient_email, subject: 'Invitation')
   end
 
