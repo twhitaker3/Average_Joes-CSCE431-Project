@@ -1,5 +1,11 @@
-Hi <%= @invitation.recipient_email %>
-You are invited to join Aggie Wranglers Administration.
+You are invited to join Aggie Wranglers Administration. 
 
-Click <%= link_to 'Sign Up', new_admin_session_path(@invitation.token) %>
+Please confirm your email using the link below. 
+You will create your password there. Please note 
+that you can only set your email through this 
+link once.
+
+Please click here to confirm this email: <%= @url %>.
+
+Thanks for joining and have a great day!
 
