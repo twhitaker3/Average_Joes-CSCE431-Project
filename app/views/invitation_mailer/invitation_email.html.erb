@@ -4,10 +4,14 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Hi <%= @invitation.recipient_email %></h1>
+   <h1>Hi <%= @invitation.recipient_email %></h1>
     <p>
-      You are invited to join Aggie Wranglers Administration. Click <%= link_to 'Sign Up', new_admin_session_path(@invitation.token) %>
+      Please confirm your email using the link below. 
+You will create your password there. Please note 
+that you can only set your email through this 
+link once.
     </p>
+    <p>Please click here to confirm this email: <%= @url %>.</p>
   </body>
 </html>
 
