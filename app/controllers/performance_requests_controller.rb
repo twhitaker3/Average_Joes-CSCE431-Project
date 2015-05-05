@@ -56,7 +56,7 @@ class PerformanceRequestsController < ApplicationController
    
     respond_to do |format|
       if @performance_request.save
-	NewRequestMailer.new_request_email(@admin).deliver
+	NewRequestMailer.new_request_email().deliver
         format.html { redirect_to '/welcome/home', notice: 'Performance request was successfully created.' }
         format.json { render json: @performance_request, status: :created, location: @performance_request }
       else
