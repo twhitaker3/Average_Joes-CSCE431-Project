@@ -1,4 +1,7 @@
-class NewRequestMailer < ActionMailer::Base
+class NewRequestMailer < Devise::Mailer
+  helper :application
+  default template_path: 'devise/mailer'
+
   default from: "from@example.com"
 
   def new_request_email(admin)
