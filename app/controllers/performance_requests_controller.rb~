@@ -52,6 +52,7 @@ class PerformanceRequestsController < ApplicationController
   def create
     @performance_request = PerformanceRequest.new(params[:performance_request])
     @performance_request.status = "Pending"
+    @performance_request.end_at = @performance_request.start_at
    
     respond_to do |format|
       if @performance_request.save
