@@ -12,6 +12,7 @@ Then I should be on the wranglers_portal home page
 When I follow "Authorized Users"
 And I should be on the View Requests page
 Then I should see "James"
+When I follow "View" from "James"
 Then I should see "Status"
 When I select "Accepted" from "Status"
 And I press "Update Status"

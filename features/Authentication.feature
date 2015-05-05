@@ -1,9 +1,7 @@
 Feature: User can login as wrangler personelle 
 
 Scenario: Sign up
-Given I am on the Authentication page
-When I follow "Sign up"
-Then I should be on the Sign Up page
+Given I am on the Sign Up page
 When I fill in "Email" with "alliemart7@tamu.edu"
 And I fill in "Password" with "howdyaggies"
 And I fill in "Password confirmation" with "howdyaggies"
