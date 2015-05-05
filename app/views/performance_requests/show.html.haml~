@@ -1,56 +1,80 @@
-%p#notice= notice
-
-%p
-  %b Contact Information:
-%p
-  %b First name:
-  = @performance_request.first_name
-%p
-  %b Last name:
-  = @performance_request.last_name
-%p
-  %b Email:
-  = @performance_request.email
-%p
-  %b Organization:
-  = @performance_request.organization
-%p
-  %b Date:
-  = @performance_request.start_at
-%p
-  %b Location:
-  = @performance_request.location
-%p
-  %b Address: 
-  %p 
-  = @performance_request.adr_line1
+%center
+  %h1 View Request
+  <hr width="75%">
+  <hr width="50%">
   %p
-
-  = @performance_request.adr_line2
+    %h3 Contact Information:
+    <hr width="33%">
   %p
-
-  = @performance_request.city
+    %b First name:
+    = @performance_request.first_name
   %p
-  = @performance_request.state
+    %b Last name:
+    = @performance_request.last_name
   %p
-  = @performance_request.zip
-%p
-  %b Type:
-  = @performance_request.kind
-%p
-  %b Dress:
-  = @performance_request.dress
-%p
-  %b Description:
-  = @performance_request.description
+    %b Email:
+    = @performance_request.email
+  %p
+    %b Phone Number:
+    = @performance_request.number
+  %p
+    %b Address: 
+    %p 
+    = @performance_request.padr_line1
+    %p
+
+    = @performance_request.padr_line2
+    %p
+
+    = @performance_request.p_city
+    %p
+    = @performance_request.p_state
+    %p
+    = @performance_request.p_zip
+  %p
+    %h3 Performance Information:
+    <hr width="33%">
+  %p
+    %b Organization:
+    = @performance_request.organization
+  %p
+    %b Date:
+    = @performance_request.start_at
+  %p
+    %b Location:
+    = @performance_request.location
+  %p
+    %b Address: 
+    %p 
+    = @performance_request.adr_line1
+    %p
+
+    = @performance_request.adr_line2
+    %p
+
+    = @performance_request.city
+    %p
+    = @performance_request.state
+    %p
+    = @performance_request.zip
+  %p
+    %b Type:
+    = @performance_request.kind
+  %p
+    %b Dress:
+    = @performance_request.dress
+  %p
+    %b Description:
+    = @performance_request.description
 
 
 
-= form_tag @performance_requests_path, :method => :put do
-  = label :performance_request, :status, 'Status'
-  = select :performance_request, :status, ['Pending','Accepted','Rejected']
-  = submit_tag 'Update Status'
+  = form_tag @performance_requests_path, :method => :put do
+    = label :performance_request, :status, 'Status'
+    = select :performance_request, :status, ['Pending','Accepted','Rejected']
+    = submit_tag 'Update Status'
 
-= link_to 'Edit', edit_performance_request_path(@performance_request)
-\|
-= link_to 'Back', performance_requests_path
+
+  = link_to 'Back', performance_requests_path, :class => 'btn btn-primary'
+
+  <hr width="75%">

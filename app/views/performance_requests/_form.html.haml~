@@ -7,74 +7,97 @@
           %li= msg
   
   %p
-    %b Personal Contact Information:
+    %h3 Personal Contact Information:
+    <hr width="40%">
   .field
     = f.label :first_name, 'First Name'
-    = f.text_field :first_name
+    %br
+    = f.text_field :first_name, class: "input-lg"
   .field
     = f.label :last_name,  'Last Name'
+    %br
     = f.text_field :last_name
   .field
     = f.label :email
+    %br
     = f.text_field :email
   .field
     = f.label :number, 'Phone Number', class: 'optional'
+    %br
     = f.text_field :number
   %p
     %b Your Address so that we may thank you:
   .field
-    = f.label :padr_line1 , 'Address Line 1 ' , class: 'optional'
+    = f.label :padr_line1 , 'Address Line 1: ' , class: 'optional'
+    %br
     = f.text_field :padr_line1
   .field
-    = f.label :padr_line2 , 'Address Line 2 ' , class: 'optional'
+    = f.label :padr_line2 , 'Address Line 2: ' , class: 'optional'
+    %br
     = f.text_field :padr_line2
   .field
-    = f.label :p_city , 'City ' , class: 'optional'
+    = f.label :p_city , 'City: ' , class: 'optional'
+    %br
     = f.text_field :p_city
   .field
-    = f.label :p_state , 'State ' , class: 'optional'
+    = f.label :p_state , 'State: ' , class: 'optional'
+    %br
     = f.text_field :p_state
   .field
-    = f.label :p_zip , 'Zip ' , class: 'optional'
+    = f.label :p_zip , 'Zip: ' , class: 'optional'
+    %br
     = f.text_field :p_zip
   %p
-    %b Performance Information
+    %h3 Performance Information
+    <hr width="40%">
   .field
     = f.label :organization, 'Performance For'
+    %br
     = f.text_field :organization
   .field
     = f.label :start_at , 'Date and Time of Performance'
-    = f.datetime_select :start_at, :minute_step => 15, :ampm => true
+    %p 
+      %b YYYY/MM/DD
+      = f.datetime_select :start_at, :minute_step => 15, :ampm => true
   .field
-    = f.label :location
+    = f.label :location 
+    %br
     = f.text_field :location
   %p
     %b Address:
   .field
     = f.label :adr_line1 , 'Address Line 1'
+    %br
     = f.text_field :adr_line1
   .field
     = f.label :adr_line2 , 'Address Line 2' , class: 'optional'
+    %br
     = f.text_field :adr_line2
   .field
     = f.label :city , 'City'
+    %br
     = f.text_field :city
   .field
     = f.label :state , 'State'
+    %br
     = f.text_field :state
   .field
     = f.label :zip , 'Zip'
+    %br
     = f.text_field :zip
   %p
     %b Details:
   .field
     = f.label :kind , 'Type of Performance'
+    %br
     = f.select :kind, ['','Private','Public']
   .field
     = f.label :dress, 'Type of Attire'
+    %br
     = f.select :dress, ['','Formal','Casual']
   .field
     = f.label :description, 'Why Aggie Wranglers?'
+    %br
     = f.text_area :description
   .actions
     = f.submit 'Submit'

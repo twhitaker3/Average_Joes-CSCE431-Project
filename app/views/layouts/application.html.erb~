@@ -14,12 +14,14 @@
      <%= yield %>
    
    </div><!-- /container -->
-     <p class="notice"><%= notice %></p>
-     <p class="alert"?<%= alert %></p>
+ 
+     
+     <p align="center">
      <% if admin_signed_in? %>
-       <%= link_to "Sign out", destroy_admin_session_path, :method => :delete, :style=>'color:#FFFFFF;', :class => 'btn btn-primary' %>
+       <%= link_to "Sign out", destroy_admin_session_path, :method => :delete, :style=>'color:#fde5a7;', :class => 'btn btn-primary' %>
      <% else %>
-       <%= link_to('Sign in', new_admin_session_path, :style=>'color:#FFFFFF;', :class => 'btn btn-primary') %>
+       <%= link_to('Sign in', new_admin_session_path, :style=>'color:#fde5a7;', :class => 'btn btn-info') %>
      <% end %>
+     </p>
 </body>
 </html>

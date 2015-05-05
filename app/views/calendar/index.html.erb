@@ -1,8 +1,14 @@
 <!-- Probably move the stylesheet to you layout. Also make sure you include the javascript. -->
 <%= stylesheet_link_tag "event_calendar" %>
 <%= javascript_include_tag 'event_calendar' %>
-
+<center>
 <h1>Calendar</h1>
+<hr width="75%">
+<hr width="50%">
+</center>
 <%= link_to 'Table View', performance_requests_path,:style=>'color:#FFFFFF;', class: "btn btn-small btn-primary" %>
 
 <%= raw(event_calendar) %>
+<center>
+<hr width="75%">
+</center>

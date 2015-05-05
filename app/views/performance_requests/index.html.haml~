@@ -1,36 +1,45 @@
-%h1 Open Performance Requests
+%center
+  %h1 Open Performance Requests
+  <hr width="75%">
+  %div{:class => 'btn-group'}
+    = link_to 'Calendar View', calendar_path, :class => 'btn btn-primary'
+    = link_to 'Submit New Performance Request', new_performance_request_path, :class => 'btn btn-small btn-primary'
 
-= link_to 'Calendar View', calendar_path
-%table
-  %tr
-    %th First name
-    %th Last name
-    %th Email
-    %th Performance For
-    %th= sortable 'Start_at'
-    %th Location
-    %th Private
-    %th Dress
-    %th Description
-    %th= sortable 'Status'
-    %th
-    %th
+    = link_to 'Send Invitations', new_invitation_path, :class => 'btn btn-small btn-primary'
+  <hr width="50%">
+  %end
 
-  - @performance_requests.each do |performance_request|
+  %table.table.table-striped
     %tr
-      %td= performance_request.first_name
-      %td= performance_request.last_name
-      %td= performance_request.email
-      %td= performance_request.organization
-      %td= performance_request.start_at.strftime("%B %e, %Y @ %H:%M")
-      %td= performance_request.location
-      %td= performance_request.kind
-      %td= performance_request.dress
-      %td= performance_request.description
-      %td= performance_request.status
-      %td= link_to 'View', performance_request
-      %td= link_to 'Delete', performance_request, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th First name
+      %th Last name
+      %th Email
+      %th Performance For
+      %th= sortable 'Start_at'
+      %th Location
+      %th Private
+      %th Dress
+      %th Description
+      %th= sortable 'Status'
+      %th
+      %th
 
-%br
+    - @performance_requests.each do |performance_request|
+      %tr
+        %td= performance_request.first_name
+        %td= performance_request.last_name
+        %td= performance_request.email
+        %td= performance_request.organization
+        %td= performance_request.start_at.strftime("%B %e, %Y @ %H:%M")
+        %td= performance_request.location
+        %td= performance_request.kind
+        %td= performance_request.dress
+        %td= performance_request.description
+        %td= link_to performance_request.status, performance_request, :class => 'btn btn-small btn-primary'
+        %td= link_to 'View', performance_request, :class => 'btn btn-small btn-primary'
+        %td= link_to 'Delete', performance_request,:class => 'btn btn-small btn-primary', :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-= link_to 'Submit New Performance Request', new_performance_request_path
+  %br
+
+
+  <hr width="75%">

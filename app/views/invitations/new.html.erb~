@@ -1,7 +1,7 @@
+<center>
 <h2>New Invitation</h2>
 
 <%= form_for @invitation do |f| %>
-  <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :recipient_email %><br />
@@ -12,5 +12,6 @@
     <%= f.submit "Invite!" %>
   </div>
 <% end %>
+</center>
 
 

@@ -1,9 +1,10 @@
-%h1 Wranglers Portal
-%p Welcome!
-
-%br
-= link_to 'Submit New Performance Request', new_performance_request_path, class: "btn"
-
-
-%br
-= link_to 'Authorized Users', '/performance_requests', class: "btn"
+%center
+  %h1 Wranglers Portal
+  <hr width="75%">
+  <hr width="50%">
+  %h3 Welcome!
+  %br
+  %div{:class => 'btn-group-vertical'}
+    = link_to 'Submit New Performance Request', new_performance_request_path, :class => 'btn btn-primary'
+    = link_to 'Authorized Users', '/performance_requests', :class => 'btn btn-primary'
+  <hr width="75%">
