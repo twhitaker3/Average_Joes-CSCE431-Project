@@ -6,7 +6,9 @@ class NewRequestMailer < ActionMailer::Base
     @url = 'https://wranglers-portal.herokuapp.com/performance_requests'
     
     # Sending a test email for now, need to figure out how to send to all admins
-    mail(to: "wranglers.aggie@gmail.com", subject: @subject)
+    Admin.all.each { |admin| 
+      mail(to: admin.email, subject: @subject)
+    }
   end
 end
 
