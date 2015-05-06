@@ -1,9 +1,5 @@
-class NewRequestMailer < Devise::Mailer
-  helper :application
-  default template_path: 'devise/mailer'
-
-  default to: Proc.new { Admin.pluck(:email) },
-          from: "wranglers.aggie@gmail.com"
+class NewRequestMailer < ActionMailer::Base
+  default from: "from@example.com"
 
   def new_request_email()
     @subject = "New Performance Request"
