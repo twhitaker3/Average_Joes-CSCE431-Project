@@ -7,7 +7,7 @@ class NewRequestMailer < ActionMailer::Base
     
     # Senmd email to all admins for site
     Admin.all.each { |admin| 
-      mail(to: admin.email, subject: @subject)
+      mail(to: admin.email, subject: @subject).deliver
     }
   end
 end
